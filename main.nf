@@ -2,11 +2,9 @@
 
 nextflow.enable.dsl=2
 
-process {
-    container = 'ghcr.io/rwtaylor/nf-nanoporeits:latest'
-}
-
 process SIMPLE_TEST {
+    // Define the container for this specific process
+    container = 'ghcr.io/rwtaylor/nf-nanoporeits:latest'
     tag "hello_world"
 
     input:
